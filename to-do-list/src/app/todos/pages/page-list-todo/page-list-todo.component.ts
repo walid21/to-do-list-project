@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from 'src/app/core/models/todo';
 import { TodosService } from '../../services/todos.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-page-list-todo',
@@ -10,11 +11,19 @@ import { Router } from '@angular/router';
 })
 export class PageListTodoComponent {
   public tab!: Todo[];
+  public init: Todo = new Todo();
+  newTask: string = '';
 
   constructor(private todosService: TodosService, private router: Router) {
     this.todosService.getData().subscribe((data) => {
       this.tab = data;
-      console.log(this.tab);
+    });
+  }
+
+  public add(obj: Todo) {
+    this.todosService.postData(obj).subscribe((reponse) => {
+      console.log('Tache ajoutée');
+      this.router.navigate(['']);
     });
   }
 }
