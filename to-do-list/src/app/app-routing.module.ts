@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/todo', pathMatch: 'full' },
+  { path: '', redirectTo: '/todos', pathMatch: 'full' },
   {
     path: 'todos',
     loadChildren: () =>
