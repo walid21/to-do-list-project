@@ -24,4 +24,8 @@ export class TodosService {
   public getOrderById(id: number): Observable<Todo> {
     return this.http.get<Todo>(`${this.configUrl}/${id}`);
   }
+
+  public getData(): Observable<Todo[]> {
+    return this.http.get<Todo[]>(this.configUrl);
+  }
 }

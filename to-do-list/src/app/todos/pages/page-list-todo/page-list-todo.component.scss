@@ -1,0 +1,9 @@
+.list-group-item:hover {
+  background-color: #f0f0f0; /* Couleur de fond au survol */
+  cursor: pointer; /* Curseur de type main (pointeur) au survol */
+}
+
+.list-group-item.active {
+  background-color: #007bff; /* Couleur de fond pour l'élément actif */
+  color: #fff; /* Couleur du texte pour l'élément actif */
+}

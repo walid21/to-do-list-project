@@ -1,1 +1,6 @@
 <h1>TO-DO List</h1>
+<ul class="list-group" *ngFor="let obj of tab">
+  <button type="button" class="btn btn-info">Edit</button>
+  <input type="checkbox" aria-label="Checkbox for following text input" />
+  <li class="list-group-item">{{ obj.title }}</li>
+</ul>
