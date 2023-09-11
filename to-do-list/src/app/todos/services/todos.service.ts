@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class TodosService {
   constructor(private http: HttpClient) {}
-  configUrl = ' http://localhost:3000/todos';
+  configUrl = ' http://localhost:4000/todos';
 
   public changeState(todo: Todo, stateTodo: StateTodo): Observable<Todo> {
     const todoNew = new Todo(todo);
@@ -23,5 +23,9 @@ export class TodosService {
 
   public getOrderById(id: number): Observable<Todo> {
     return this.http.get<Todo>(`${this.configUrl}/${id}`);
+  }
+
+  public getData(): Observable<Todo[]> {
+    return this.http.get<Todo[]>(this.configUrl);
   }
 }
