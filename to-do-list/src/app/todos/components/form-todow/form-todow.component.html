@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <label for="newTask" class="font-weight-bold mb-2 title-label">Task</label>
+  <form class="input-group mb-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="New Task"
+        aria-label="New task"
+        aria-describedby="button-addon2"
+        formControlName="title"
+        required
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="submit"
+          id="button-addon2"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
