@@ -8,6 +8,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./todos/todos.module').then((m) => m.TodosModule),
   },
+  
+  {path: '**', loadChildren: () => import('./errors/errors.module').then(m => m.ErrorsModule)},
 ];
 
 @NgModule({
