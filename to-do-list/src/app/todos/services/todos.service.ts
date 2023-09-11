@@ -20,4 +20,8 @@ export class TodosService {
   public update(todo: Todo): Observable<Todo> {
     return this.http.put<Todo>(`${this.configUrl}/${todo.id}`, todo);
   }
+
+  public getOrderById(id: number): Observable<Todo> {
+    return this.http.get<Todo>(`${this.configUrl}/${id}`);
+  }
 }
