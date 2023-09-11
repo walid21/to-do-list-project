@@ -1,4 +1,4 @@
 export enum StateTodo {
-    EN_COURS = 'EN_COURS',
-    TERMINE = 'TERMINE',
+  EN_COURS = 'EN COURS',
+  TERMINE = 'TERMINE',
 }
