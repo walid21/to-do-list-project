@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageEditTodoComponent } from './pages/page-edit-todo/page-edit-todo.component';
-import { OrdersRoutingModule } from './todos-routing';
+import { TodosRoutingModule } from './todos-routing';
 import { PageListTodoComponent } from './pages/page-list-todo/page-list-todo.component';
+import { FormTodoComponent } from './components/form-todo/form-todo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
     PageEditTodoComponent,
-    PageListTodoComponent
+    PageListTodoComponent,
+    FormTodoComponent,
   ],
-  imports: [
-    CommonModule,
-    OrdersRoutingModule
-  ]
+  imports: [CommonModule, TodosRoutingModule, ReactiveFormsModule],
 })
-export class TodosModule { }
+export class TodosModule {}

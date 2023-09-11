@@ -1,1 +1,6 @@
-<p>page-edit-todo works!</p>
+  <div class="container">
+    <app-form-todo
+      [todo]="editTodo"
+      (submitted)="onEdit($event)"
+    ></app-form-todo>
+  </div>

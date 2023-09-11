@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Output } from '@angular/core';
+import { ActivatedRoute, OutletContext, Router } from '@angular/router';
 import { TodosService } from '../../services/todos.service';
 import { Todo } from 'src/app/core/models/todo';
 
@@ -10,6 +10,12 @@ import { Todo } from 'src/app/core/models/todo';
 })
 export class PageEditTodoComponent {
   public editTodo!: Todo;
+
+  public onEdit(todo: Todo) {
+    this.todosService
+      .update(todo)
+      .subscribe(() => this.router.navigate(['orders']));
+  }
 
   constructor(
     private todosService: TodosService,

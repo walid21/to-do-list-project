@@ -8,4 +8,4 @@ const routes: Routes = [{ path: 'edit/:id', component: PageEditTodoComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class OrdersRoutingModule {}
+export class TodosRoutingModule {}
