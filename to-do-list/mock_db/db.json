@@ -2,47 +2,28 @@
   "todos": [
     {
       "stateTodo": "EN COURS",
-<<<<<<< HEAD
       "title": "trouver une image drôle pour le 401",
-=======
-      "index": 5,
-      "title": "trouver une image drôle pour le 404",
->>>>>>> fa546923faf9c28911cda43b2eaf0a8c3899fb11
       "id": 1
     },
     {
-      "stateTodo": "EN COURS",
-      "index": 5,
       "title": "acheter des pâtes",
+      "stateTodo": "EN COURS",
       "id": 2
     },
     {
-      "stateTodo": "TERMINE",
       "title": "laver la voiture",
+      "stateTodo": "EN COURS",
       "id": 3
     },
     {
-      "stateTodo": "TERMINE",
-      "index": 5,
       "title": "git add *, git push origin main",
+      "stateTodo": "EN COURS",
       "id": 4
     },
     {
       "stateTodo": "TERMINE",
-      "index": 5,
       "title": "est-ce que tu connais warzaza ?",
       "id": 5
-    },
-    {
-      "stateTodo": "TERMINE",
-      "index": 5,
-      "title": "test ajouter",
-      "id": 6
-    },
-    {
-      "stateTodo": "EN COURS",
-      "title": "tache supplement tomate chef",
-      "id": 7
     }
   ]
 }
