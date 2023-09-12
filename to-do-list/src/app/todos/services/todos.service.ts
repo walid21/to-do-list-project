@@ -37,4 +37,5 @@ export class TodosService {
   public postData(newObj: Todo): Observable<Todo> {
     return this.http.post<Todo>(this.configUrl, newObj);
   }
+  
 }
