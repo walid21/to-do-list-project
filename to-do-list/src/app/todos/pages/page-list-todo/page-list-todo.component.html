@@ -12,6 +12,9 @@
 </nav>
 <app-form-todo [objTodo]="init" (formData)="add($event)"></app-form-todo>
 <div class="container mt-5">
+  <div *ngIf="tab">
+    <div *ngIf="tab.length === 0">Pas de tâches présentes</div>
+  </div>
   <ul class="list-group" *ngFor="let obj of tab">
     <li class="list-group-item" [ngClass]="{ active: obj.stateTodo === state }">
       <button type="button" class="btn btn-warning" (click)="goToEdit(obj)">
@@ -30,5 +33,5 @@
     </li>
   </ul>
   <br>
-  <app-compteur-todos [compteur]="nbTachesRestantes"></app-compteur-todos>
+  <app-compteur-todos [tableau]=" tab " ></app-compteur-todos>
 </div>

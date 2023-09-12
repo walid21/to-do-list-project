@@ -12,7 +12,6 @@ import { StateTodo } from 'src/app/core/enums/state-todo';
 export class PageListTodoComponent {
   public tab!: Todo[];
   public init: Todo = new Todo();
-  public nbTachesRestantes!: number;
   public state: StateTodo = StateTodo.TERMINE;
   newTask: string = '';
   isChecked: boolean = false;
@@ -20,19 +19,13 @@ export class PageListTodoComponent {
   constructor(private todosService: TodosService, private router: Router) {
     this.todosService.getData().subscribe((data) => {
       this.tab = data;
-      this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length
     });
   }
-
-  // this.nbTachesRestantes = = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
 
   public add(obj: Todo) {
     this.todosService.postData(obj).subscribe((reponse) => {
       console.log('Tache ajoutée');
       this.tab.push(reponse);
-
-      
-      this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
     });
   }
 
@@ -41,8 +34,6 @@ export class PageListTodoComponent {
     const newState = target.checked ? StateTodo.TERMINE : StateTodo.EN_COURS;
     this.todosService.changeState(obj, newState).subscribe((data) => {
       Object.assign(obj, data);
-
-      this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
 
     });
 
@@ -53,5 +44,8 @@ export class PageListTodoComponent {
   public goToEdit(todo: Todo) {
     this.router.navigate(['todos', 'edit', todo.id]);
   }
+
+
+
 
 }

@@ -24,9 +24,12 @@ export class PageEditTodoComponent {
   ) {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     if (id) {
-      this.todosService
+      let temp = this.todosService
         .getOrderById(id)
-        .subscribe((data) => (this.editTodo = data));
+        .subscribe(
+          (data) => (this.editTodo = data),
+          (error) => this.idNotFound()
+        );
     }
   }
 
@@ -40,5 +43,10 @@ export class PageEditTodoComponent {
         this.router.navigate(['todos']);
       })
     }
+  }
+
+
+  public idNotFound(){
+    this.router.navigate(['**']);
   }
 }
