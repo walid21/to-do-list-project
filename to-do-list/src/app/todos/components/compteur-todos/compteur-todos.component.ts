@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Todo } from 'src/app/core/models/todo';
 
 @Component({
   selector: 'app-compteur-todos',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CompteurTodosComponent {
 
-  @Input() compteur!: number;
+  @Input() tableau!: Todo[];
 
   constructor(){}
 
