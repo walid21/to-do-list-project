@@ -27,7 +27,9 @@ export class PageEditTodoComponent {
     private router: Router
   ) {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    if (id) {
+    console.log(id);
+    
+    if (id!=null) {
       let temp = this.todosService.getOrderById(id).subscribe(
         (data) => (this.editTodo = data),
         (error) => this.idNotFound()
