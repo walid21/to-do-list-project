@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from 'src/app/core/models/todo';
 import { TodosService } from '../../services/todos.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { StateTodo } from 'src/app/core/enums/state-todo';
 
 @Component({
   selector: 'app-page-list-todo',
@@ -10,11 +12,33 @@ import { Router } from '@angular/router';
 })
 export class PageListTodoComponent {
   public tab!: Todo[];
+  public init: Todo = new Todo();
+  public state: StateTodo = StateTodo.TERMINE;
+  newTask: string = '';
+  isChecked: boolean = false;
 
   constructor(private todosService: TodosService, private router: Router) {
     this.todosService.getData().subscribe((data) => {
       this.tab = data;
-      console.log(this.tab);
     });
+  }
+
+  public add(obj: Todo) {
+    this.todosService.postData(obj).subscribe((reponse) => {
+      console.log('Tache ajoutée');
+      this.router.navigate(['']);
+    });
+  }
+
+  public changeState(obj: Todo, event: Event) {
+    const target = event.target as HTMLInputElement;
+    const newState = target.checked ? StateTodo.TERMINE : StateTodo.EN_COURS;
+    this.todosService.changeState(obj, newState).subscribe((data) => {
+      Object.assign(obj, data);
+    });
+  }
+
+  public goToEdit(todo: Todo) {
+    this.router.navigate(['todos', 'edit', todo.id]);
   }
 }

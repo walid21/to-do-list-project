@@ -10,13 +10,11 @@ import { Todo } from 'src/app/core/models/todo';
 })
 export class PageEditTodoComponent {
   public editTodo!: Todo;
-  
-  @Output() notifDelete = new EventEmitter();
 
   public onEdit(todo: Todo) {
     this.todosService
       .update(todo)
-      .subscribe(() => this.router.navigate(['orders']));
+      .subscribe(() => this.router.navigate(['todos']));
   }
 
   constructor(
