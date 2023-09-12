@@ -20,6 +20,9 @@
     {
       "stateTodo": "TERMINE",
       "index": 5,
+
+      "stateTodo": "EN COURS",
+
       "title": "git add *, git push origin main",
       "id": 4
     },
@@ -53,11 +56,6 @@
     {
       "title": "push de la reponse dans le tab",
       "id": 18,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "push de la reponse dans le tab",
-      "id": 19,
       "stateTodo": "EN COURS"
     }
   ]
