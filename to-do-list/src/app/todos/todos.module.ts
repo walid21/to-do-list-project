@@ -6,6 +6,7 @@ import { PageListTodoComponent } from './pages/page-list-todo/page-list-todo.com
 import { FormTodoComponent } from './components/form-todo/form-todo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormTodowComponent } from './components/form-todow/form-todow.component';
+import { CompteurTodosComponent } from './components/compteur-todos/compteur-todos.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FormTodowComponent } from './components/form-todow/form-todow.component
     PageListTodoComponent,
     FormTodoComponent,
     FormTodowComponent,
+    CompteurTodosComponent,
   ],
   imports: [CommonModule, TodosRoutingModule, ReactiveFormsModule],
 

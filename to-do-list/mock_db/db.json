@@ -6,8 +6,8 @@
       "id": 3
     },
     {
-      "title": "git add *, git push origin main",
       "stateTodo": "EN COURS",
+      "title": "git add *, git push origin main",
       "id": 4
     },
     {
@@ -16,9 +16,9 @@
       "id": 5
     },
     {
+      "stateTodo": "EN COURS",
       "title": "acheter des pâtes",
-      "id": 6,
-      "stateTodo": "EN COURS"
+      "id": 6
     }
   ]
 }
