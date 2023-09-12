@@ -10,7 +10,7 @@
     TO-DO List
   </a>
 </nav>
-<app-form-todow [objTodo]="init" (formData)="add($event)"></app-form-todow>
+<app-form-todo [objTodo]="init" (formData)="add($event)"></app-form-todo>
 <div class="container mt-5">
   <ul class="list-group" *ngFor="let obj of tab">
     <li class="list-group-item" [ngClass]="{ active: obj.stateTodo === state }">

@@ -12,7 +12,6 @@
     },
     {
       "title": "laver la voiture",
-      "stateTodo": "EN COURS",
       "id": 3
     },
     {
@@ -24,6 +23,11 @@
       "stateTodo": "TERMINE",
       "title": "est-ce que tu connais warzaza ?",
       "id": 5
+    },
+    {
+      "stateTodo": "TERMINE",
+      "title": "acheter des pâtes",
+      "id": 6
     }
   ]
 }

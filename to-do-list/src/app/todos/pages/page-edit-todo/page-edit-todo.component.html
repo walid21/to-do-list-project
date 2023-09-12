@@ -1,3 +1,3 @@
 <div class="container" *ngIf="editTodo">
-  <app-form-todo [todo]="editTodo" (submitted)="onEdit($event)"></app-form-todo>
+  <app-form-todo [objTodo]="editTodo" (formData)="onEdit($event)"></app-form-todo>
 </div>

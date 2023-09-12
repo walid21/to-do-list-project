@@ -1,19 +1,48 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <input
-      type="text"
-      class="form-control"
-      id="title"
-      formControlName="title"
-      placeholder="Ici votre todo"
-    />
-  </div>
-  <div class="form-group">
-    <select class="form-control" id="stateTodo" formControlName="stateTodo">
-      <option *ngFor="let stateTodo of states" [value]="stateTodo">
-        {{ stateTodo }}
-      </option>
-    </select>
-  </div>
-  <button type="submit" class="btn btn-success">Editer</button>
-</form>
+<div class="container mt-5">
+  <label for="newTask" class="font-weight-bold mb-2 title-label">Task</label>
+  <form class="input-group mb-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="New Task"
+        aria-label="New task"
+        aria-describedby="button-addon2"
+        formControlName="title"
+        required
+      />
+      <div class="input-group" *ngIf="form.controls['title'].errors?.['minlength']">
+        Ce champ doit avoir au minimum 5 caractères.
+      </div>
+      <div class="input-group" *ngIf="form.controls['title'].errors?.['maxlength']">
+        Ce champ doit avoir au maximum 50 caractères.
+      </div>
+      <div *ngIf="this.objTodo.id" class="input-group">
+        <select class="form-control" id="stateTodo" formControlName="stateTodo">
+          <option *ngFor="let stateTodo of states" [value]="stateTodo">
+            {{ stateTodo }}
+          </option>
+        </select>
+      </div>
+      <button
+        [disabled]="this.form.invalid"
+        *ngIf="this.objTodo.id"
+        type="submit"
+        class="btn btn-success"
+      >
+        Edit
+      </button>
+      <div *ngIf="!this.objTodo.id" class="input-group-append">
+        <button
+          [disabled]="this.form.invalid"
+          class="btn btn-outline-secondary"
+          type="submit"
+          id="button-addon2"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
