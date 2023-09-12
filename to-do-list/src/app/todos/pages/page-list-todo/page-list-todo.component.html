@@ -13,12 +13,15 @@
 <app-form-todow [objTodo]="init" (formData)="add($event)"></app-form-todow>
 <div class="container mt-5">
   <ul class="list-group" *ngFor="let obj of tab">
-    <li class="list-group-item">
+    <li class="list-group-item" [ngClass]="{ active: obj.stateTodo === state }">
       <button type="button" class="btn btn-warning">Edit</button>
       <input
         type="checkbox"
         aria-label="Checkbox for following text input"
         class="mx-5"
+        id="state"
+        [checked]="obj.stateTodo === state"
+        (change)="changeState(obj, $event)"
       />
 
       {{ obj.title }}
