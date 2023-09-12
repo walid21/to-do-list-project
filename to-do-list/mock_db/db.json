@@ -1,12 +1,12 @@
 {
   "todos": [
     {
-      "stateTodo": "EN COURS",
+      "stateTodo": "TERMINE",
       "title": "trouver une image drôle pour le 404",
       "id": 1
     },
     {
-      "stateTodo": "TERMINE",
+      "stateTodo": "EN COURS",
       "title": "acheter des pâtes",
       "id": 2
     },
@@ -24,21 +24,6 @@
       "stateTodo": "TERMINE",
       "title": "est-ce que tu connais warzaza ?",
       "id": 5
-    },
-    {
-      "stateTodo": "EN COURS",
-      "title": "j'ai mis les cramptés",
-      "id": 6
-    },
-    {
-      "stateTodo": "EN COURS",
-      "title": "blabla",
-      "id": 7
-    },
-    {
-      "title": "blublu",
-      "id": 8,
-      "stateTodo": "EN COURS"
     }
   ]
 }
