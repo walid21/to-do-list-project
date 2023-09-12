@@ -2,30 +2,34 @@
   "todos": [
     {
       "stateTodo": "EN COURS",
+      "index": 5,
       "title": "trouver une image drôle pour le 404",
       "id": 1
     },
     {
-      "title": "acheter des pâtes",
       "stateTodo": "EN COURS",
+      "index": 5,
+      "title": "acheter des pâtes",
       "id": 2
     },
     {
+      "stateTodo": "TERMINE",
       "title": "laver la voiture",
       "id": 3
     },
     {
+      "stateTodo": "TERMINE",
+      "index": 5,
       "title": "git add *, git push origin main",
-      "stateTodo": "EN COURS",
       "id": 4
     },
     {
       "stateTodo": "TERMINE",
+      "index": 5,
       "title": "est-ce que tu connais warzaza ?",
       "id": 5
     },
     {
-<<<<<<< HEAD
       "stateTodo": "TERMINE",
       "index": 5,
       "title": "test ajouter",
@@ -37,53 +41,13 @@
       "id": 7
     },
     {
-      "title": "la tache du chef",
-      "id": 8,
-      "stateTodo": "EN COURS"
-    },
-    {
       "title": "test redirect",
       "id": 9,
       "stateTodo": "EN COURS"
     },
     {
-      "title": "test redirect",
-      "id": 10,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "test route",
-      "id": 11,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "hello test router dnas onsubmit",
-      "id": 12,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "hello test router dnas onsubmit",
-      "id": 13,
-      "stateTodo": "EN COURS"
-    },
-    {
       "title": "dqzd",
       "id": 14,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "tache new",
-      "id": 15,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "tache new",
-      "id": 16,
-      "stateTodo": "EN COURS"
-    },
-    {
-      "title": "push de la reponse dans le tab",
-      "id": 17,
       "stateTodo": "EN COURS"
     },
     {
@@ -94,10 +58,6 @@
     {
       "title": "push de la reponse dans le tab",
       "id": 19,
-=======
-      "title": "acheter des pâtes",
-      "id": 6,
->>>>>>> f114acb18e50dfcaaaaafd7863898126242c40cb
       "stateTodo": "EN COURS"
     }
   ]
