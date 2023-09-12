@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from 'src/app/core/models/todo';
 import { TodosService } from '../../services/todos.service';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { StateTodo } from 'src/app/core/enums/state-todo';
 
 @Component({
@@ -24,9 +23,8 @@ export class PageListTodoComponent {
   }
 
   public add(obj: Todo) {
-    this.todosService.postData(obj).subscribe((reponse) => {
-      console.log('Tache ajoutée');
-      this.router.navigate(['']);
+    this.todosService.postData(obj).subscribe(() => {
+      this.router.navigate(['todos']);
     });
   }
 
