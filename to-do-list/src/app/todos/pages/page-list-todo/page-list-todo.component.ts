@@ -23,8 +23,9 @@ export class PageListTodoComponent {
   }
 
   public add(obj: Todo) {
-    this.todosService.postData(obj).subscribe(() => {
-      this.router.navigate(['todos']);
+    this.todosService.postData(obj).subscribe((reponse) => {
+      console.log('Tache ajoutée');
+      this.tab.push(reponse);
     });
   }
 
