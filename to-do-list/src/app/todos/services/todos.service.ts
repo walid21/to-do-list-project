@@ -28,4 +28,8 @@ export class TodosService {
   public getData(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.configUrl);
   }
+
+  public postData(newObj: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.configUrl, newObj);
+  }
 }
