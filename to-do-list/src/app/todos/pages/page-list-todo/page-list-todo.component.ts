@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from 'src/app/core/models/todo';
 import { TodosService } from '../../services/todos.service';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { StateTodo } from 'src/app/core/enums/state-todo';
 
 @Component({
@@ -36,5 +35,9 @@ export class PageListTodoComponent {
     this.todosService.changeState(obj, newState).subscribe((data) => {
       Object.assign(obj, data);
     });
+  }
+
+  public goToEdit(todo: Todo) {
+    this.router.navigate(['todos', 'edit', todo.id]);
   }
 }

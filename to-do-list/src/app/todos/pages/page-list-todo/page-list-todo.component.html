@@ -10,11 +10,13 @@
     TO-DO List
   </a>
 </nav>
-<app-form-todow [objTodo]="init" (formData)="add($event)"></app-form-todow>
+<app-form-todo [objTodo]="init" (formData)="add($event)"></app-form-todo>
 <div class="container mt-5">
   <ul class="list-group" *ngFor="let obj of tab">
     <li class="list-group-item" [ngClass]="{ active: obj.stateTodo === state }">
-      <button type="button" class="btn btn-warning">Edit</button>
+      <button type="button" class="btn btn-warning" (click)="goToEdit(obj)">
+        Edit
+      </button>
       <input
         type="checkbox"
         aria-label="Checkbox for following text input"

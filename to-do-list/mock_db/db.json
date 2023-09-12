@@ -2,34 +2,30 @@
   "todos": [
     {
       "stateTodo": "EN COURS",
-      "index": 5,
       "title": "trouver une image drôle pour le 404",
       "id": 1
     },
     {
-      "stateTodo": "EN COURS",
-      "index": 5,
       "title": "acheter des pâtes",
+      "stateTodo": "EN COURS",
       "id": 2
     },
     {
-      "stateTodo": "TERMINE",
       "title": "laver la voiture",
       "id": 3
     },
     {
-      "stateTodo": "TERMINE",
-      "index": 5,
       "title": "git add *, git push origin main",
+      "stateTodo": "EN COURS",
       "id": 4
     },
     {
       "stateTodo": "TERMINE",
-      "index": 5,
       "title": "est-ce que tu connais warzaza ?",
       "id": 5
     },
     {
+<<<<<<< HEAD
       "stateTodo": "TERMINE",
       "index": 5,
       "title": "test ajouter",
@@ -98,6 +94,10 @@
     {
       "title": "push de la reponse dans le tab",
       "id": 19,
+=======
+      "title": "acheter des pâtes",
+      "id": 6,
+>>>>>>> f114acb18e50dfcaaaaafd7863898126242c40cb
       "stateTodo": "EN COURS"
     }
   ]

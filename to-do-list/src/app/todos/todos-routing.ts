@@ -4,8 +4,8 @@ import { PageEditTodoComponent } from './pages/page-edit-todo/page-edit-todo.com
 import { PageListTodoComponent } from './pages/page-list-todo/page-list-todo.component';
 
 const routes: Routes = [
-  { path: 'edit/:id', component: PageEditTodoComponent },
   { path: '', component: PageListTodoComponent },
+  { path: 'edit/:id', component: PageEditTodoComponent },
 ];
 
 @NgModule({

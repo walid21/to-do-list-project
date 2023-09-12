@@ -29,7 +29,13 @@ export class TodosService {
     return this.http.get<Todo[]>(this.configUrl);
   }
 
+  public delete(id: number): Observable<Todo>{
+    return this.http.delete<Todo>(`${this.configUrl}/${id}`)
+  }
+  
+
   public postData(newObj: Todo): Observable<Todo> {
     return this.http.post<Todo>(this.configUrl, newObj);
   }
+  
 }
