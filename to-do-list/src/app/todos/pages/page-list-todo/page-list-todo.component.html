@@ -14,7 +14,7 @@
 <div class="container mt-5">
   <ul class="list-group" *ngFor="let obj of tab">
     <li class="list-group-item" [ngClass]="{ active: obj.stateTodo === state }">
-      <button type="button" class="btn btn-info" (click)="goToEdit(obj)">
+      <button type="button" class="btn btn-warning" (click)="goToEdit(obj)">
         Edit
       </button>
       <input

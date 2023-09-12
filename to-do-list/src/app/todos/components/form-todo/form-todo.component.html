@@ -19,17 +19,19 @@
         Ce champ doit avoir au maximum 50 caractères.
       </div>
       <div *ngIf="this.objTodo.id" class="input-group">
+
         <select class="form-control" id="stateTodo" formControlName="stateTodo">
           <option *ngFor="let stateTodo of states" [value]="stateTodo">
             {{ stateTodo }}
           </option>
         </select>
       </div>
+
       <button
         [disabled]="this.form.invalid"
         *ngIf="this.objTodo.id"
         type="submit"
-        class="btn btn-success"
+        class="btn btn-warning"
       >
         Edit
       </button>

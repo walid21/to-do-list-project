@@ -25,9 +25,9 @@
       "id": 5
     },
     {
-      "stateTodo": "TERMINE",
       "title": "acheter des pâtes",
-      "id": 6
+      "id": 6,
+      "stateTodo": "EN COURS"
     }
   ]
 }
