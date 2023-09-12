@@ -1,3 +1,39 @@
-<div class="container" *ngIf="editTodo">
+
+
+<nav class="navbar bg-dark navbar-light justify-content-center p-3 mb-2">
+  <a class="navbar-brand text-white" href="#">
+    <img
+      src="https://cdn.icon-icons.com/icons2/413/PNG/256/TD_Bank_41068.png"
+      width="30"
+      height="30"
+      class="d-inline-block align-top"
+      alt=""
+    />
+    TO-DO List
+  </a>
+</nav>
+
+
+<br>
+
+
+<div class="container my-container d-flex justify-content-center flex-column" *ngIf="editTodo">
   <app-form-todo [todo]="editTodo" (submitted)="onEdit($event)"></app-form-todo>
+
+  <br>
+  <button class="btn btn-danger" (click)="myDialog.show()">Supprimer</button>
 </div>
+
+
+<br>
+
+<dialog #myDialog>
+  <h4>
+     Voulez-vous vraiment supprimer ?
+  </h4>
+  <br>
+  <div class="d-flex justify-content-center flex-column">
+    <button class="btn btn-danger" (click)="onDelete(editTodo.id)">Confirmer</button>
+    <button class="btn btn-primary" (click)="myDialog.close()">Annuler</button>
+  </div>
+</dialog>

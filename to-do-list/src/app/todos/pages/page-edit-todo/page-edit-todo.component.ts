@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, OutletContext, Router } from '@angular/router';
 import { TodosService } from '../../services/todos.service';
 import { Todo } from 'src/app/core/models/todo';
@@ -27,6 +27,18 @@ export class PageEditTodoComponent {
       this.todosService
         .getOrderById(id)
         .subscribe((data) => (this.editTodo = data));
+    }
+  }
+
+
+
+
+  
+  public onDelete(id: number){
+    if(id){
+      this.todosService.delete(id).subscribe((data) =>{
+        this.router.navigate(['todos']);
+      })
     }
   }
 }
