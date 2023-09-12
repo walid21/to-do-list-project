@@ -1,5 +1,8 @@
 <nav class="navbar bg-dark navbar-light justify-content-center p-3 mb-2">
-  <a class="navbar-brand text-white" href="#">
+  <button
+    class="navbar-brand bg-dark border-0 text-white"
+    (click)="retourMenu()"
+  >
     <img
       src="https://cdn.icon-icons.com/icons2/413/PNG/256/TD_Bank_41068.png"
       width="30"
@@ -8,30 +11,30 @@
       alt=""
     />
     TO-DO List
-  </a>
+  </button>
 </nav>
 
+<div
+  class="container my-container d-flex justify-content-center flex-column"
+  *ngIf="editTodo"
+>
+  <app-form-todo
+    [objTodo]="editTodo"
+    (formData)="onEdit($event)"
+  ></app-form-todo>
 
-<br>
-
-
-<div class="container my-container d-flex justify-content-center flex-column" *ngIf="editTodo">
-  <app-form-todo [objTodo]="editTodo" (formData)="onEdit($event)"></app-form-todo>
-
-  <br>
   <button class="btn btn-danger" (click)="myDialog.show()">Supprimer</button>
 </div>
 
-
-<br>
+<br />
 
 <dialog #myDialog>
-  <h4>
-     Voulez-vous vraiment supprimer ?
-  </h4>
-  <br>
+  <h4>Voulez-vous vraiment supprimer ?</h4>
+  <br />
   <div class="d-flex justify-content-center flex-column">
-    <button class="btn btn-danger" (click)="onDelete(editTodo.id)">Confirmer</button>
+    <button class="btn btn-danger" (click)="onDelete(editTodo.id)">
+      Confirmer
+    </button>
     <button class="btn btn-primary" (click)="myDialog.close()">Annuler</button>
   </div>
 </dialog>

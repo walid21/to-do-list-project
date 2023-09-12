@@ -2,23 +2,28 @@
   "todos": [
     {
       "stateTodo": "TERMINE",
-      "title": "yodzd",
+      "title": "trouver une image drôle pour le 404",
       "id": 1
     },
     {
-      "stateTodo": "TERMINE",
-      "title": "yodzdesgsrf",
+      "stateTodo": "EN COURS",
+      "title": "acheter des pâtes",
       "id": 2
     },
     {
-      "title": "yodzdesgsrfegthyjfhg",
-      "id": 3,
-      "stateTodo": "EN COURS"
+      "stateTodo": "EN COURS",
+      "title": "laver la voiture",
+      "id": 3
     },
     {
-      "title": "yodzdesgsrfegthyjfhgsefzefwsf",
-      "id": 4,
-      "stateTodo": "EN COURS"
+      "stateTodo": "EN COURS",
+      "title": "git add *, git push origin main",
+      "id": 4
+    },
+    {
+      "stateTodo": "TERMINE",
+      "title": "est-ce que tu connais warzaza ?",
+      "id": 5
     }
   ]
 }
