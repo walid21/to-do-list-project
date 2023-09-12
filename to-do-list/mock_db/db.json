@@ -11,6 +11,7 @@
       "id": 2
     },
     {
+      "stateTodo": "EN COURS",
       "title": "laver la voiture",
       "id": 3
     },
@@ -25,9 +26,9 @@
       "id": 5
     },
     {
-      "stateTodo": "EN COURS",
-      "title": "acheter des pâtes",
-      "id": 6
+      "title": "j'ai mis les cramptés",
+      "id": 6,
+      "stateTodo": "EN COURS"
     }
   ]
 }

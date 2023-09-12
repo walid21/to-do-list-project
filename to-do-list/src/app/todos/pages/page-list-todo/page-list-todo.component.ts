@@ -21,14 +21,18 @@ export class PageListTodoComponent {
     this.todosService.getData().subscribe((data) => {
       this.tab = data;
       this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length
-      console.log(this.nbTachesRestantes)
     });
   }
+
+  // this.nbTachesRestantes = = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
 
   public add(obj: Todo) {
     this.todosService.postData(obj).subscribe((reponse) => {
       console.log('Tache ajoutée');
       this.tab.push(reponse);
+
+      
+      this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
     });
   }
 
@@ -38,9 +42,7 @@ export class PageListTodoComponent {
     this.todosService.changeState(obj, newState).subscribe((data) => {
       Object.assign(obj, data);
 
-
-      this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length
-      console.log(this.nbTachesRestantes)
+      this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
 
     });
 
@@ -52,10 +54,4 @@ export class PageListTodoComponent {
     this.router.navigate(['todos', 'edit', todo.id]);
   }
 
-
-  // ngOnChange(){
-
-  //   this.nbTachesRestantes = this.tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length
-  //   console.log(this.nbTachesRestantes)
-  // }
 }
