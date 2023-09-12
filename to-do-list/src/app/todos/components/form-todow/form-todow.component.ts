@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Todo } from 'src/app/core/models/todo';
 
 @Component({
@@ -12,7 +13,7 @@ export class FormTodowComponent {
   @Input() objTodo!: Todo;
   @Output() formData = new EventEmitter();
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.form = this.fb.group({

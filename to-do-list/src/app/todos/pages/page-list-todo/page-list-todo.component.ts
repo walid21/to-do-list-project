@@ -26,7 +26,7 @@ export class PageListTodoComponent {
   public add(obj: Todo) {
     this.todosService.postData(obj).subscribe((reponse) => {
       console.log('Tache ajoutée');
-      this.router.navigate(['']);
+      this.tab.push(reponse);
     });
   }
 
