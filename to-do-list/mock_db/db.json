@@ -6,8 +6,8 @@
       "id": 1
     },
     {
+      "stateTodo": "TERMINE",
       "title": "acheter des pâtes",
-      "stateTodo": "EN COURS",
       "id": 2
     },
     {
@@ -26,8 +26,18 @@
       "id": 5
     },
     {
+      "stateTodo": "EN COURS",
       "title": "j'ai mis les cramptés",
-      "id": 6,
+      "id": 6
+    },
+    {
+      "stateTodo": "EN COURS",
+      "title": "blabla",
+      "id": 7
+    },
+    {
+      "title": "blublu",
+      "id": 8,
       "stateTodo": "EN COURS"
     }
   ]
