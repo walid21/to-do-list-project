@@ -14,7 +14,7 @@ export class PageEditTodoComponent {
   public onEdit(todo: Todo) {
     this.todosService
       .update(todo)
-      .subscribe(() => this.router.navigate(['orders']));
+      .subscribe(() => this.router.navigate(['todos']));
   }
 
   constructor(

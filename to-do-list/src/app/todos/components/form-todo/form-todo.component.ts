@@ -21,7 +21,8 @@ export class FormTodoComponent {
     this.submitted.emit(this.form.value);
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder) {}
+  ngOnInit() {
     this.form = this.fb.group({
       stateTodo: [this.todo.stateTodo],
       title: [this.todo.title],

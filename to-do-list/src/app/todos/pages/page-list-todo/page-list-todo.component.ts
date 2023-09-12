@@ -17,4 +17,8 @@ export class PageListTodoComponent {
       console.log(this.tab);
     });
   }
+
+  public goToEdit(todo: Todo) {
+    this.router.navigate(['todos', 'edit', todo.id]);
+  }
 }
