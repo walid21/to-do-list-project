@@ -34,18 +34,14 @@ export class PageListTodoComponent {
     const newState = target.checked ? StateTodo.TERMINE : StateTodo.EN_COURS;
     this.todosService.changeState(obj, newState).subscribe((data) => {
       Object.assign(obj, data);
-
     });
+  }
 
-
-    
+  public retourMenu() {
+    this.router.navigate(['./todos']);
   }
 
   public goToEdit(todo: Todo) {
     this.router.navigate(['todos', 'edit', todo.id]);
   }
-
-
-
-
 }
