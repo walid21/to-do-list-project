@@ -1,18 +1,7 @@
-<nav class="navbar bg-dark navbar-light justify-content-center p-3 mb-2">
-  <button
-    class="navbar-brand bg-dark border-0 text-white"
-    (click)="retourMenu()"
-  >
-    <img
-      src="https://cdn.icon-icons.com/icons2/413/PNG/256/TD_Bank_41068.png"
-      width="30"
-      height="30"
-      class="d-inline-block align-top"
-      alt=""
-    />
-    TO-DO List
-  </button>
-</nav>
+
+
+<app-bandeau-superieur></app-bandeau-superieur>
+
 <app-form-todo [objTodo]="init" (formData)="add($event)"></app-form-todo>
 
 <div class="container mt-5">

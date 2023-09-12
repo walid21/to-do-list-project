@@ -37,9 +37,9 @@ export class PageListTodoComponent {
     });
   }
 
-  public retourMenu() {
-    this.router.navigate(['./todos']);
-  }
+  // public retourMenu() {
+  //   this.router.navigate(['./todos']);
+  // }
 
   public goToEdit(todo: Todo) {
     this.router.navigate(['todos', 'edit', todo.id]);
