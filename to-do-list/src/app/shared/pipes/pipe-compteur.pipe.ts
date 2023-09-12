@@ -9,7 +9,6 @@ import { Todo } from 'src/app/core/models/todo';
 export class PipeCompteurPipe implements PipeTransform {
 
   transform(tab: Todo[]): number {
-    console.log("pipe")
     if(tab){
       return tab.filter((todo) => todo.stateTodo===StateTodo.EN_COURS).length;
     }
