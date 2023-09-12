@@ -4,6 +4,7 @@ import { PageEditTodoComponent } from './pages/page-edit-todo/page-edit-todo.com
 import { TodosRoutingModule } from './todos-routing';
 import { PageListTodoComponent } from './pages/page-list-todo/page-list-todo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CompteurTodosComponent } from './components/compteur-todos/compteur-todos.component';
 import { FormTodoComponent } from './components/form-todo/form-todo.component';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { FormTodoComponent } from './components/form-todo/form-todo.component';
     PageEditTodoComponent,
     PageListTodoComponent,
     FormTodoComponent,
+    CompteurTodosComponent,
   ],
   imports: [CommonModule, TodosRoutingModule, ReactiveFormsModule],
 })
