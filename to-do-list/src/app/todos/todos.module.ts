@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CompteurTodosComponent } from './components/compteur-todos/compteur-todos.component';
 import { FormTodoComponent } from './components/form-todo/form-todo.component';
 import { SharedModule } from '../shared/shared.module';
+import { BandeauSuperieurComponent } from './components/bandeau-superieur/bandeau-superieur.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,16 @@ import { SharedModule } from '../shared/shared.module';
     PageListTodoComponent,
     FormTodoComponent,
     CompteurTodosComponent,
+    BandeauSuperieurComponent,
   ],
-  imports: [CommonModule, TodosRoutingModule, ReactiveFormsModule, SharedModule],
+  imports: [
+    CommonModule,
+    TodosRoutingModule,
+    ReactiveFormsModule,
+    SharedModule
+  ],
+  exports : [
+    BandeauSuperieurComponent,
+  ]
 })
 export class TodosModule {}
