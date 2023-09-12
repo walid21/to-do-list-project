@@ -17,6 +17,10 @@ export class PageEditTodoComponent {
       .subscribe(() => this.router.navigate(['todos']));
   }
 
+  public retourMenu() {
+    this.router.navigate(['./todos']);
+  }
+
   constructor(
     private todosService: TodosService,
     private activatedRoute: ActivatedRoute,
@@ -24,29 +28,22 @@ export class PageEditTodoComponent {
   ) {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     if (id) {
-      let temp = this.todosService
-        .getOrderById(id)
-        .subscribe(
-          (data) => (this.editTodo = data),
-          (error) => this.idNotFound()
-        );
+      let temp = this.todosService.getOrderById(id).subscribe(
+        (data) => (this.editTodo = data),
+        (error) => this.idNotFound()
+      );
     }
   }
 
-
-
-
-  
-  public onDelete(id: number){
-    if(id){
-      this.todosService.delete(id).subscribe((data) =>{
+  public onDelete(id: number) {
+    if (id) {
+      this.todosService.delete(id).subscribe((data) => {
         this.router.navigate(['todos']);
-      })
+      });
     }
   }
 
-
-  public idNotFound(){
+  public idNotFound() {
     this.router.navigate(['**']);
   }
 }

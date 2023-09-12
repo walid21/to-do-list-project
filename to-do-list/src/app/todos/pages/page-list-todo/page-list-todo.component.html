@@ -1,5 +1,8 @@
 <nav class="navbar bg-dark navbar-light justify-content-center p-3 mb-2">
-  <a class="navbar-brand text-white" href="#">
+  <button
+    class="navbar-brand bg-dark border-0 text-white"
+    (click)="retourMenu()"
+  >
     <img
       src="https://cdn.icon-icons.com/icons2/413/PNG/256/TD_Bank_41068.png"
       width="30"
@@ -8,9 +11,10 @@
       alt=""
     />
     TO-DO List
-  </a>
+  </button>
 </nav>
 <app-form-todo [objTodo]="init" (formData)="add($event)"></app-form-todo>
+
 <div class="container mt-5">
   <div *ngIf="tab">
     <div *ngIf="tab.length === 0">Pas de tâches présentes</div>
@@ -32,6 +36,7 @@
       {{ obj.title }}
     </li>
   </ul>
-  <br>
-  <app-compteur-todos [tableau]=" tab " ></app-compteur-todos>
+
+  <br />
+  <app-compteur-todos [tableau]="tab"></app-compteur-todos>
 </div>
